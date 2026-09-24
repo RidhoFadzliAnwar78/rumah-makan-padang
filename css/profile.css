@@ -1,0 +1,459 @@
+/* ==================================================
+PROFILE PAGE
+Rumah Makan Padang Sederhana
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Montserrat", sans-serif;
+background-color: #fffaf3;
+color: #2d2d2d;
+line-height: 1.6;
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+a {
+text-decoration: none;
+}
+/* ==================================================
+CONTAINER
+================================================== */
+
+.container {
+width: 90%;
+max-width: 1200px;
+margin: auto;
+}
+
+/* ==================================================
+NAVBAR
+================================================== */
+
+.header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background-color: #ffffff;
+box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-container {
+min-height: 80px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 30px;
+}
+
+/* LOGO */
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.logo-navbar {
+width: 55px;
+height: 55px;
+object-fit: cover;
+border-radius: 50%;
+border: 3px solid #c79a3b;
+}
+
+.brand-name {
+display: flex;
+flex-direction: column;
+}
+
+.brand-name span {
+font-size: 17px;
+font-weight: 700;
+color: #7a1f1f;
+}
+
+.brand-name small {
+font-size: 12px;
+font-weight: 500;
+color: #8b7355;
+}
+
+/* NAVIGATION */
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+.navbar a {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    transition:color 0.3s ease;
+}
+/* GARIS BAWAH */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background-color: #b32025;
+    transition:
+        width 0.3s ease;
+}
+/* HOVER */
+.navbar a:hover {
+    color: #b32025;
+}
+.navbar a:hover::after {
+    width: 100%;
+}
+/* NAVBAR ACTIVE */
+.navbar a.active {
+    color: #b32025;
+}
+.navbar a.active::after {
+    width: 100%;
+}
+
+/* ==================================================
+PAGE HERO
+================================================== */
+
+
+.page-hero {
+min-height: 330px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 60px 20px;
+text-align: center;
+background:
+    linear-gradient(
+        rgba(70, 30, 15, 0.75),
+        rgba(70, 30, 15, 0.75)
+    ),
+    url("../images/rendang.jpg");
+background-size: cover;
+background-position: center;
+}
+
+.page-hero span {
+color: #e4bd68;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 3px;
+}
+
+.page-hero h1 {
+margin: 12px 0;
+color: #ffffff;
+font-size: clamp(35px, 5vw, 55px);
+line-height: 1.2;
+}
+
+.page-hero p {
+color: #f2e8df;
+font-size: 14px;
+}
+
+/* ==================================================
+PROFILE CONTENT
+================================================== */
+
+.profile-page {
+max-width: 1150px;
+margin: auto;
+padding: 100px 30px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+gap: 70px;
+}
+
+/* ==================================================
+PROFILE IMAGE
+================================================== */
+.profile-image {
+position: relative;
+}
+
+.profile-image img {
+width: 100%;
+height: 450px;
+object-fit: cover;
+border-radius: 20px;
+box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Efek dekorasi */
+.profile-image::after {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+border: 3px solid #d4ad5c;
+border-radius: 20px;
+top: 15px;
+left: 15px;
+z-index: -1;
+}
+
+/* ==================================================
+PROFILE TEXT
+================================================== */
+.profile-content {
+padding: 10px 0;
+}
+
+.section-label {
+display: inline-block;
+margin-bottom: 12px;
+color: #a51e22;
+font-size: 13px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.profile-content h2 {
+margin-bottom: 20px;
+color: #2b1a12;
+font-size: 35px;
+line-height: 1.2;
+}
+.profile-content p {
+margin-bottom: 15px;
+color: #6c625b;
+font-size: 14px;
+line-height: 1.8;
+}
+
+/* ==================================================
+VISION & MISSION
+================================================== */
+.vision-section {
+padding: 90px 6%;
+background-color: #f8f1e7;
+}
+
+.vision-section .section-title {
+margin-bottom: 45px;
+text-align: center;
+}
+.vision-section .section-title span {
+color: #b32025;
+font-size: 13px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+.vision-section .section-title h2 {
+margin-top: 8px;
+color: #2b1a12;
+font-size: 32px;
+}
+
+/* ==================================================
+VISION GRID
+================================================== */
+.vision-grid {
+max-width: 1150px;
+margin: auto;
+display: grid;
+grid-template-columns:
+    repeat(3, 1fr);
+gap: 25px;
+}
+
+/* ==================================================
+INFO BOX
+================================================== */
+.info-box {
+padding: 35px 25px;
+background-color: #ffffff;
+border-radius: 15px;
+text-align: center;
+box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.info-box:hover {
+transform: translateY(-8px);
+box-shadow:0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ==================================================
+ICON
+================================================== */
+.info-icon {
+width: 65px;
+height: 65px;
+margin: 0 auto 18px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background-color: #f8ead0;
+font-size: 28px;
+}
+
+/* ==================================================
+INFO BOX TEXT
+================================================== */
+.info-box h3 {
+margin-bottom: 10px;
+color: #7a1f1f;
+font-size: 20px;
+}
+.info-box p {
+color: #716760;
+font-size: 13px;
+line-height: 1.7;
+}
+
+/* ==================================================
+RESPONSIVE TABLET
+================================================== */
+@media (max-width: 900px) {
+.profile-page {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 80px 30px;
+}
+.profile-image {
+    max-width: 650px;
+    margin: auto;
+}
+.profile-image img {
+    height: 380px;
+}
+.profile-content {
+    text-align: center;
+}
+.vision-grid {
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+/* ==================================================
+RESPONSIVE MOBILE
+================================================== */
+@media (max-width: 600px) {
+.page-hero {
+    min-height: 280px;
+    padding: 50px 20px;
+}
+.page-hero h1 {
+    font-size: 36px;
+}
+.page-hero p {
+    font-size: 13px;
+}
+.profile-page {
+    padding: 60px 20px;
+}
+.profile-image {
+    width: 90%;
+}
+.profile-image img {
+    height: 280px;
+    border-radius: 15px;
+}
+.profile-image::after {
+    border-radius: 15px;
+    top: 10px;
+    left: 10px;
+}
+.profile-content h2 {
+    font-size: 28px;
+}
+.profile-content p {
+    font-size: 13px;
+}
+.vision-section {
+    padding: 60px 20px;
+}
+.vision-section .section-title h2 {
+    font-size: 27px;
+}
+.vision-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+}
+.info-box {
+    padding: 30px 20px;
+}
+}
+
+/* ==================================================
+FOOTER
+================================================== */
+.footer {
+background-color: #2b1a12;
+color: #ffffff;
+}
+
+.container-footer {
+max-width: 1200px;
+margin: auto;
+padding: 55px 6%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 50px;
+}
+
+.footer h2 {
+margin-bottom: 10px;
+color: #e4bd68;
+}
+
+.footer h3 {
+margin-bottom: 15px;
+color: #e4bd68;
+
+}
+.footer p {
+color: #d4cbc4;
+font-size: 13px;
+}
+.footer-contact p {
+margin-bottom: 8px;
+}
+.footer a {
+color: #ffffff;
+transition: 0.3s ease;
+}
+.footer a:hover {
+color: #e4bd68;
+}
+
+/* COPYRIGHT */
+.copyright {
+padding: 18px;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+text-align: center;
+}
+
+.copyright p {
+font-size: 12px;
+color: #aaa09a;
+}
